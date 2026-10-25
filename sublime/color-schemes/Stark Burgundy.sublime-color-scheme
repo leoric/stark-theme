@@ -1,0 +1,152 @@
+{
+  "name": "Stark Burgundy",
+  "globals": {
+    "background": "#3b2035",
+    "foreground": "#e8d5b7",
+    "caret": "#e8d5b7",
+    "line_highlight": "#47283f",
+    "selection": "#b898e055",
+    "selection_foreground": "#e8d5b7",
+    "gutter": "#2c1727",
+    "gutter_foreground": "#9c817f",
+    "line_diff_added": "#a8c987",
+    "line_diff_modified": "#e8c47a",
+    "line_diff_deleted": "#ef8a91",
+    "brackets": "#d6a6df",
+    "brackets_foreground": "#e8d5b7",
+    "bracket_contents": "#d6a6df",
+    "bracket_contents_foreground": "#e8d5b7",
+    "tags": "#d6a6df",
+    "find_highlight": "#e8c47a",
+    "find_highlight_foreground": "#3b2035",
+    "highlight": "#b898e055",
+    "highlight_foreground": "#e8d5b7",
+    "guide": "#65405a",
+    "active_guide": "#c6ad9c",
+    "stack_guide": "#65405a",
+    "shadow": "#00000030"
+  },
+  "rules": [
+    {
+      "name": "Comments",
+      "scope": "comment",
+      "foreground": "#a58a9a",
+      "font_style": "italic"
+    },
+    {
+      "name": "Keywords",
+      "scope": "keyword, storage",
+      "foreground": "#d6a6df"
+    },
+    {
+      "name": "Operators",
+      "scope": "keyword.operator",
+      "foreground": "#d6a6df"
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "foreground": "#a8c987"
+    },
+    {
+      "name": "String escapes",
+      "scope": "constant.character.escape",
+      "foreground": "#8ec9c1"
+    },
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric",
+      "foreground": "#e8c47a"
+    },
+    {
+      "name": "Constants",
+      "scope": "constant.language, constant.other",
+      "foreground": "#e8b18d"
+    },
+    {
+      "name": "Functions",
+      "scope": "entity.name.function, support.function",
+      "foreground": "#b9b0ed"
+    },
+    {
+      "name": "Types and classes",
+      "scope": "entity.name.type, entity.name.class, support.type, support.class",
+      "foreground": "#8ec9c1"
+    },
+    {
+      "name": "Parameters",
+      "scope": "variable.parameter",
+      "foreground": "#e8d5b7"
+    },
+    {
+      "name": "Variables",
+      "scope": "variable",
+      "foreground": "#e8d5b7"
+    },
+    {
+      "name": "Properties",
+      "scope": "variable.other.property, meta.property-name",
+      "foreground": "#b9b0ed"
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation",
+      "foreground": "#c6ad9c"
+    },
+    {
+      "name": "Tags",
+      "scope": "entity.name.tag",
+      "foreground": "#d6a6df"
+    },
+    {
+      "name": "Attributes",
+      "scope": "entity.other.attribute-name",
+      "foreground": "#b9b0ed"
+    },
+    {
+      "name": "Markup headings",
+      "scope": "markup.heading",
+      "foreground": "#d6a6df",
+      "bold": true
+    },
+    {
+      "name": "Markup bold",
+      "scope": "markup.bold",
+      "foreground": "#e8d5b7",
+      "bold": true
+    },
+    {
+      "name": "Markup italic",
+      "scope": "markup.italic",
+      "foreground": "#e8d5b7",
+      "italic": true
+    },
+    {
+      "name": "Markup links",
+      "scope": "markup.underline.link, string.other.link",
+      "foreground": "#b9b0ed",
+      "underline": true
+    },
+    {
+      "name": "Diff added",
+      "scope": "markup.inserted",
+      "foreground": "#a8c987"
+    },
+    {
+      "name": "Diff removed",
+      "scope": "markup.deleted",
+      "foreground": "#ef8a91"
+    },
+    {
+      "name": "Diff changed",
+      "scope": "markup.changed",
+      "foreground": "#e8c47a"
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "foreground": "#ef8a91",
+      "bold": true
+    }
+  ]
+}
