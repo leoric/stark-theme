@@ -1,0 +1,152 @@
+{
+  "name": "Stark Light",
+  "globals": {
+    "background": "#fdfcfa",
+    "foreground": "#3d3a36",
+    "caret": "#7c5cba",
+    "line_highlight": "#f5f2ee",
+    "selection": "#9b8ac455",
+    "selection_foreground": "#3d3a36",
+    "gutter": "#f3f0eb",
+    "gutter_foreground": "#9a948c",
+    "line_diff_added": "#5a9a52",
+    "line_diff_modified": "#b8943a",
+    "line_diff_deleted": "#c75a4d",
+    "brackets": "#9b8ac4",
+    "brackets_foreground": "#3d3a36",
+    "bracket_contents": "#7c5cba",
+    "bracket_contents_foreground": "#3d3a36",
+    "tags": "#7c5cba",
+    "find_highlight": "#b8943a",
+    "find_highlight_foreground": "#fdfcfa",
+    "highlight": "#9b8ac455",
+    "highlight_foreground": "#3d3a36",
+    "guide": "#e8e4df",
+    "active_guide": "#6b6660",
+    "stack_guide": "#e8e4df",
+    "shadow": "#00000030"
+  },
+  "rules": [
+    {
+      "name": "Comments",
+      "scope": "comment",
+      "foreground": "#b0aaa2",
+      "font_style": "italic"
+    },
+    {
+      "name": "Keywords",
+      "scope": "keyword, storage",
+      "foreground": "#9b6bb8"
+    },
+    {
+      "name": "Operators",
+      "scope": "keyword.operator",
+      "foreground": "#9b6bb8"
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "foreground": "#5a9a52"
+    },
+    {
+      "name": "String escapes",
+      "scope": "constant.character.escape",
+      "foreground": "#4a8585"
+    },
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric",
+      "foreground": "#b07842"
+    },
+    {
+      "name": "Constants",
+      "scope": "constant.language, constant.other",
+      "foreground": "#c07855"
+    },
+    {
+      "name": "Functions",
+      "scope": "entity.name.function, support.function",
+      "foreground": "#5a7cc7"
+    },
+    {
+      "name": "Types and classes",
+      "scope": "entity.name.type, entity.name.class, support.type, support.class",
+      "foreground": "#4a8585"
+    },
+    {
+      "name": "Parameters",
+      "scope": "variable.parameter",
+      "foreground": "#3d3a36"
+    },
+    {
+      "name": "Variables",
+      "scope": "variable",
+      "foreground": "#3d3a36"
+    },
+    {
+      "name": "Properties",
+      "scope": "variable.other.property, meta.property-name",
+      "foreground": "#5a7cc7"
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation",
+      "foreground": "#6b6660"
+    },
+    {
+      "name": "Tags",
+      "scope": "entity.name.tag",
+      "foreground": "#9b6bb8"
+    },
+    {
+      "name": "Attributes",
+      "scope": "entity.other.attribute-name",
+      "foreground": "#5a7cc7"
+    },
+    {
+      "name": "Markup headings",
+      "scope": "markup.heading",
+      "foreground": "#9b6bb8",
+      "bold": true
+    },
+    {
+      "name": "Markup bold",
+      "scope": "markup.bold",
+      "foreground": "#3d3a36",
+      "bold": true
+    },
+    {
+      "name": "Markup italic",
+      "scope": "markup.italic",
+      "foreground": "#3d3a36",
+      "italic": true
+    },
+    {
+      "name": "Markup links",
+      "scope": "markup.underline.link, string.other.link",
+      "foreground": "#5a7cc7",
+      "underline": true
+    },
+    {
+      "name": "Diff added",
+      "scope": "markup.inserted",
+      "foreground": "#5a9a52"
+    },
+    {
+      "name": "Diff removed",
+      "scope": "markup.deleted",
+      "foreground": "#c75a4d"
+    },
+    {
+      "name": "Diff changed",
+      "scope": "markup.changed",
+      "foreground": "#b8943a"
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "foreground": "#c75a4d",
+      "bold": true
+    }
+  ]
+}
