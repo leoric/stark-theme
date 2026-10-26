@@ -1,0 +1,719 @@
+{
+    "extends": "Adaptive.sublime-theme",
+    "rules": [
+        {"class": "title_bar", "bg": "var(titleBarBackground)", "fg": "var(titleBarForeground)"},
+        {
+            "class": "tool_tip_control",
+            "layer0.tint": "var(tooltipBackground)",
+            "layer0.opacity": 1,
+            "content_margin": [12, 8]
+        },
+        {"class": "tool_tip_label_control", "fg": "var(tooltipForeground)"},
+        {"class": "scroll_tabs_left_button", "layer0.tint": "var(tabButtonForeground)"},
+        {
+            "class": "scroll_tabs_left_button",
+            "attributes": ["hover"],
+            "layer0.tint": "var(foreground)"
+        },
+        {"class": "scroll_tabs_right_button", "layer0.tint": "var(tabButtonForeground)"},
+        {
+            "class": "scroll_tabs_right_button",
+            "attributes": ["hover"],
+            "layer0.tint": "var(foreground)"
+        },
+        {"class": "new_tab_button", "layer0.tint": "var(tabButtonForeground)"},
+        {"class": "new_tab_button", "attributes": ["hover"], "layer0.tint": "var(foreground)"},
+        {"class": "show_tabs_dropdown_button", "layer0.tint": "var(tabButtonForeground)"},
+        {
+            "class": "show_tabs_dropdown_button",
+            "attributes": ["hover"],
+            "layer0.tint": "var(foreground)"
+        },
+        {
+            "class": "tabset_control",
+            "layer0.tint": "var(tabBarBackground)",
+            "layer0.opacity": 1,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [0, 0, 0, 1],
+            "layer1.tint": "var(tabBorder)",
+            "layer1.opacity": 1,
+            "content_margin": 0,
+            "connector_height": 0,
+            "tint_index": 0,
+            "tab_overlap": 1,
+            "tint_modifier": "var(tabBarBackground)"
+        },
+        {
+            "class": "tab_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(tabInactiveBackground)",
+            "layer0.opacity": 1,
+            "layer1.texture": "",
+            "layer1.tint": "var(tabInactiveBackground)",
+            "layer1.opacity": 1,
+            "layer2.draw_center": false,
+            "layer2.texture": "",
+            "layer2.tint": "var(tabBorder)",
+            "layer2.inner_margin": [0, 0, 1, 1],
+            "layer2.opacity": 1,
+            "layer3.draw_center": false,
+            "layer3.texture": "",
+            "layer3.tint": "var(tabActiveBorder)",
+            "layer3.inner_margin": [0, 2, 0, 0],
+            "layer3.opacity": 0,
+            "tint_modifier": "var(tabInactiveBackground)",
+            "content_margin": [20, 0]
+        },
+        {
+            "class": "tab_control",
+            "attributes": ["selected"],
+            "layer0.tint": "var(tabActiveBackground)",
+            "layer1.tint": "var(tabActiveBackground)",
+            "layer2.inner_margin": [0, 0, 1, 0],
+            "layer3.opacity": 1,
+            "tint_modifier": "transparent"
+        },
+        {"class": "tab_label", "fg": "var(tabInactiveForeground)"},
+        {
+            "class": "tab_label",
+            "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+            "fg": "var(tabActiveForeground)"
+        },
+        {
+            "class": "tab_control",
+            "settings": ["!show_tab_close_buttons_on_left"],
+            "content_margin": [20, 4, 10, 4]
+        },
+        {
+            "class": "tab_control",
+            "close_button_side": "left",
+            "settings": ["show_tab_close_buttons_on_left"],
+            "content_margin": [10, 4, 20, 4]
+        },
+        {"class": "tab_control", "settings": ["!show_tab_close_buttons"], "content_margin": [20, 4]},
+        {"class": "tab_close_button", "layer0.tint": "var(tabInactiveForeground)"},
+        {
+            "class": "tab_close_button",
+            "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(tabActiveForeground)"
+        },
+        {"class": "tab_close_button", "attributes": ["hover"], "layer0.tint": "var(accent)"},
+        {
+            "class": "tab_close_button",
+            "parents": [{"class": "tab_control", "attributes": ["added"]}],
+            "layer0.tint": "var(vcsUntracked)"
+        },
+        {
+            "class": "tab_close_button",
+            "parents": [{"class": "tab_control", "attributes": ["modified"]}],
+            "layer0.tint": "var(vcsModified)"
+        },
+        {
+            "class": "tab_close_button",
+            "parents": [{"class": "tab_control", "attributes": ["deleted"]}],
+            "layer0.tint": "var(vcsDeleted)"
+        },
+        {"class": "grid_layout_control", "border_color": "var(gridBorder)", "border_size": 1},
+        {
+            "class": "sidebar_container",
+            "layer0.tint": "var(sidebarBackground)",
+            "layer0.opacity": 1,
+            "layer1.tint": "var(sidebarBorder)",
+            "layer1.opacity": 1,
+            "layer1.inner_margin": [0, 1, 1, 0],
+            "layer1.draw_center": false,
+            "content_margin": [1, 6, 1, 0]
+        },
+        {
+            "class": "sidebar_container",
+            "settings": ["sidebar_on_right"],
+            "layer1.inner_margin": [1, 1, 0, 0]
+        },
+        {"class": "sidebar_heading", "fg": "var(sidebarHeadingForeground)"},
+        {"class": "sidebar_label", "fg": "var(sidebarLabelForeground)"},
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+            "fg": "var(sidebarLabelHoverForeground)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "tree_row", "attributes": ["highlighted"]}],
+            "fg": "var(sidebarLabelSelectedForeground)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
+            "fg": "var(vcsIgnored)",
+            "color": "var(vcsIgnored)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
+            "fg": "var(vcsUntracked)",
+            "color": "var(vcsUntracked)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
+            "fg": "var(vcsModified)",
+            "color": "var(vcsModified)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
+            "fg": "var(vcsUntracked)",
+            "color": "var(vcsUntracked)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
+            "fg": "var(vcsUnmerged)",
+            "color": "var(vcsUnmerged)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
+            "fg": "var(vcsMissing)",
+            "color": "var(vcsMissing)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
+            "fg": "var(vcsDeleted)",
+            "color": "var(vcsDeleted)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
+            "fg": "var(vcsStaged)",
+            "color": "var(vcsStaged)"
+        },
+        {"class": "disclosure_button_control", "layer0.tint": "var(sidebarFolderForeground)"},
+        {
+            "class": "disclosure_button_control",
+            "attributes": ["hover"],
+            "layer0.tint": "var(foreground)"
+        },
+        {"class": "fold_button_control", "layer0.tint": "var(foreground)"},
+        {"class": "icon_folder", "layer0.tint": "var(sidebarFolderForeground)"},
+        {
+            "class": "icon_folder",
+            "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+            "layer0.tint": "var(sidebarFolderExpandedForeground)"
+        },
+        {"class": "icon_folder_dup", "layer0.tint": "var(sidebarFolderForeground)"},
+        {"class": "tree_row", "attributes": ["!hover"], "layer0.opacity": 0},
+        {
+            "class": "tree_row",
+            "attributes": ["selectable", "hover"],
+            "layer0.tint": "var(treeHoverBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["selected"],
+            "layer0.tint": "var(treeSelectedBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["highlighted"],
+            "layer0.tint": "var(treeSelectedBackground)",
+            "layer0.opacity": 1
+        },
+        {"class": "scroll_track_control", "layer0.tint": "var(scrollTrack)", "layer0.opacity": 1},
+        {"class": "puck_control", "layer0.tint": "var(scrollPuck)", "layer0.opacity": 1},
+        {
+            "class": "scroll_bar_control",
+            "parents": [{"class": "auto_complete_popup"}],
+            "tint_modifier": "var(autoCompleteBackground)"
+        },
+        {
+            "class": "scroll_corner_control",
+            "parents": [{"class": "auto_complete_popup"}],
+            "tint_modifier": "var(autoCompleteBackground)"
+        },
+        {
+            "class": "scroll_bar_control",
+            "parents": [{"class": "sidebar_container"}],
+            "tint_modifier": "var(sidebarBackground)"
+        },
+        {
+            "class": "scroll_corner_control",
+            "parents": [{"class": "sidebar_container"}],
+            "tint_modifier": "var(sidebarBackground)"
+        },
+        {
+            "class": "scroll_bar_control",
+            "parents": [{"class": "overlay_control"}],
+            "tint_modifier": "var(panelBackground)"
+        },
+        {
+            "class": "scroll_corner_control",
+            "parents": [{"class": "overlay_control"}],
+            "tint_modifier": "var(panelBackground)"
+        },
+        {
+            "class": "scroll_bar_control",
+            "parents": [{"class": "switch_project_window"}],
+            "tint_modifier": "var(panelBackground)"
+        },
+        {
+            "class": "scroll_corner_control",
+            "parents": [{"class": "switch_project_window"}],
+            "tint_modifier": "var(panelBackground)"
+        },
+        {"class": "progress_bar_control", "layer0.tint": "var(progressTrack)", "layer0.opacity": 1},
+        {
+            "class": "progress_gauge_control",
+            "layer0.tint": "var(progressGauge)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "status_bar",
+            "layer0.tint": "var(statusBarBackground)",
+            "layer0.opacity": 1,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [0, 1, 0, 0],
+            "layer1.tint": "var(statusBarBorder)",
+            "layer1.opacity": 1
+        },
+        {"class": "status_bar", "attributes": ["panel_visible"], "layer1.opacity": 0},
+        {"class": "status_bar", "attributes": ["!panel_visible"], "layer1.opacity": 1},
+        {
+            "class": "label_control",
+            "parents": [{"class": "status_bar"}],
+            "fg": "var(statusBarForeground)"
+        },
+        {
+            "class": "label_control",
+            "parents": [{"class": "status_button", "attributes": ["hover"]}],
+            "fg": "var(statusBarHoverForeground)"
+        },
+        {"class": "sidebar_button_control", "layer0.tint": "var(statusBarForeground)"},
+        {
+            "class": "sidebar_button_control",
+            "attributes": ["hover"],
+            "layer0.tint": "var(statusBarHoverForeground)"
+        },
+        {"class": "vcs_branch_icon", "layer0.tint": "var(statusBarForeground)"},
+        {
+            "class": "vcs_changes_annotation",
+            "border_color": "var(vcsAnnotationBorder)",
+            "color": "var(statusBarForeground)"
+        },
+        {
+            "class": "overlay_control",
+            "layer0.tint": "var(overlayBorder)",
+            "layer0.opacity": 1,
+            "layer1.opacity": 1,
+            "layer1.inner_margin": [1, 0, 1, 1],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(overlayControlBorder)"
+        },
+        {"class": "dialog", "layer0.tint": "var(panelBackground)", "layer0.opacity": 1},
+        {"class": "label_control", "parents": [{"class": "dialog"}], "fg": "var(panelForeground)"},
+        {
+            "class": "label_control",
+            "parents": [{"class": "panel_grid_control"}],
+            "fg": "var(panelForeground)"
+        },
+        {
+            "class": "label_control",
+            "parents": [{"class": "button_control"}],
+            "fg": "var(buttonForeground)"
+        },
+        {
+            "class": "panel_control",
+            "layer0.tint": "var(panelBackground)",
+            "layer0.opacity": 1,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [0, 1, 0, 1],
+            "layer1.tint": "var(panelBorder)",
+            "layer1.opacity": 1
+        },
+        {
+            "class": "panel_control",
+            "parents": [{"class": "switch_project_window"}],
+            "layer0.tint": "var(panelBackground)"
+        },
+        {
+            "class": "text_line_control",
+            "layer0.tint": "var(inputBackground)",
+            "layer0.opacity": 1,
+            "layer0.inner_margin": 1,
+            "layer1.tint": "var(inputBorder)",
+            "layer1.opacity": 1,
+            "layer1.inner_margin": 1,
+            "layer1.draw_center": false,
+            "color_scheme_tint": "var(inputBackground)"
+        },
+        {"class": "quick_panel", "layer0.tint": "var(quickPanelBackground)", "layer0.opacity": 1},
+        {
+            "class": "quick_panel_row",
+            "layer0.tint": "var(quickPanelBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "quick_panel_row",
+            "attributes": ["selected"],
+            "layer0.tint": "var(quickPanelSelectedBackground)"
+        },
+        {
+            "class": "mini_quick_panel_row",
+            "layer0.tint": "var(quickPanelBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "mini_quick_panel_row",
+            "attributes": ["selected"],
+            "layer0.tint": "var(quickPanelSelectedBackground)"
+        },
+        {
+            "class": "quick_panel_label",
+            "fg": "var(quickPanelForeground)",
+            "match_fg": "var(quickPanelMatchForeground)",
+            "selected_fg": "var(quickPanelSelectedForeground)",
+            "selected_match_fg": "var(quickPanelSelectedMatchForeground)"
+        },
+        {
+            "class": "quick_panel_path_label",
+            "fg": "var(quickPanelDetailForeground)",
+            "match_fg": "var(quickPanelMatchForeground)",
+            "selected_fg": "var(quickPanelSelectedForeground)",
+            "selected_match_fg": "var(quickPanelSelectedMatchForeground)"
+        },
+        {
+            "class": "quick_panel_detail_label",
+            "fg": "var(quickPanelDetailForeground)",
+            "link_color": "var(quickPanelLinkForeground)"
+        },
+        {
+            "class": "auto_complete_popup",
+            "layer0.tint": "var(autoCompleteBorder)",
+            "content_margin": 1
+        },
+        {
+            "class": "auto_complete",
+            "tint_index": -1,
+            "layer0.tint": "var(autoCompleteBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "table_row",
+            "layer0.tint": "var(autoCompleteSelectedBackground)",
+            "layer0.opacity": 0
+        },
+        {"class": "table_row", "attributes": ["selected"], "layer0.opacity": 1},
+        {
+            "class": "auto_complete_label",
+            "fg": "var(autoCompleteForeground)",
+            "match_fg": "var(autoCompleteMatchForeground)",
+            "selected_fg": "var(autoCompleteSelectedForeground)",
+            "selected_match_fg": "var(autoCompleteSelectedMatchForeground)",
+            "fg_blend": true
+        },
+        {
+            "class": "auto_complete_detail_pane",
+            "tint_index": -1,
+            "layer0.tint": "var(autoCompleteBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "button_control",
+            "layer0.tint": "var(buttonBackground)",
+            "layer0.opacity": 1,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1,
+            "layer1.tint": "var(buttonBorder)",
+            "layer1.opacity": 1
+        },
+        {
+            "class": "button_control",
+            "attributes": ["hover"],
+            "layer0.tint": "var(buttonHoverBackground)"
+        },
+        {
+            "class": "button_control",
+            "attributes": ["pressed"],
+            "layer0.tint": "var(buttonPressedBackground)"
+        },
+        {"class": "close_button", "layer0.tint": "var(foreground)"},
+        {"class": "close_button", "attributes": ["hover"], "layer0.tint": "var(accent)"},
+        {"class": "close_button", "attributes": ["added"], "layer0.tint": "var(vcsUntracked)"},
+        {"class": "close_button", "attributes": ["modified"], "layer0.tint": "var(vcsModified)"},
+        {"class": "close_button", "attributes": ["deleted"], "layer0.tint": "var(vcsDeleted)"},
+        {
+            "class": "icon_button_control",
+            "layer0.tint": "var(iconButtonBackground)",
+            "layer0.opacity": 1,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [0, 1, 0, 1],
+            "layer1.tint": "var(iconButtonBorder)",
+            "layer1.opacity": 1
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": ["left"],
+            "layer1.inner_margin": [1, 1, 0, 1]
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": ["right"],
+            "layer1.inner_margin": [0, 1, 1, 1]
+        },
+        {"class": "icon_button_control", "attributes": ["left", "right"], "layer1.inner_margin": 1},
+        {
+            "class": "icon_button_control",
+            "attributes": ["hover"],
+            "layer0.tint": "var(iconButtonHoverBackground)"
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": ["pressed"],
+            "layer0.tint": "var(iconButtonPressedBackground)"
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": ["selected"],
+            "layer0.tint": "var(iconButtonSelectedBackground)"
+        },
+        {"class": "icon_regex", "layer0.tint": "var(iconButtonForeground)", "layer0.opacity": 1},
+        {
+            "class": "icon_regex",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_regex",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_regex",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {"class": "icon_case", "layer0.tint": "var(iconButtonForeground)", "layer0.opacity": 1},
+        {
+            "class": "icon_case",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_case",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_case",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_whole_word",
+            "layer0.tint": "var(iconButtonForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_whole_word",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_whole_word",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_whole_word",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {"class": "icon_wrap", "layer0.tint": "var(iconButtonForeground)", "layer0.opacity": 1},
+        {
+            "class": "icon_wrap",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_wrap",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_wrap",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_in_selection",
+            "layer0.tint": "var(iconButtonForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_in_selection",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_in_selection",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_in_selection",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {"class": "icon_highlight", "layer0.tint": "var(iconButtonForeground)", "layer0.opacity": 1},
+        {
+            "class": "icon_highlight",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_highlight",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_highlight",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_preserve_case",
+            "layer0.tint": "var(iconButtonForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_preserve_case",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_preserve_case",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_preserve_case",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {"class": "icon_context", "layer0.tint": "var(iconButtonForeground)", "layer0.opacity": 1},
+        {
+            "class": "icon_context",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_context",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_context",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_buffer",
+            "layer0.tint": "var(iconButtonForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_buffer",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_buffer",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_buffer",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_gitignore",
+            "layer0.tint": "var(iconButtonForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_gitignore",
+            "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_gitignore",
+            "parents": [{"class": "icon_button_control", "attributes": ["pressed"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "icon_use_gitignore",
+            "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+            "layer0.tint": "var(iconButtonSelectedForeground)",
+            "layer0.opacity": 1
+        },
+        {"class": "dropdown_button_control", "layer0.tint": "var(iconButtonForeground)"},
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
+            "layer0.tint": "var(vcsUntracked)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
+            "layer0.tint": "var(vcsModified)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
+            "layer0.tint": "var(vcsUntracked)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
+            "layer0.tint": "var(vcsUnmerged)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
+            "layer0.tint": "var(vcsStaged)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
+            "layer0.tint": "var(vcsDeleted)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
+            "layer0.tint": "var(vcsMissing)"
+        }
+    ]
+}
