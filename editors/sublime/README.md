@@ -19,7 +19,7 @@ To tweak a colour, edit the variable in the variant's `.sublime-theme`
 ## Install
 
 1. `Preferences → Browse Packages…`
-2. Copy this folder in, keeping the name `Stark Theme`.
+2. Copy this folder into the `Packages` folder and rename it to `Stark Theme`.
 3. `Preferences → Theme…` → pick a Stark theme.
 4. `Preferences → Color Scheme…` → pick the matching Stark scheme.
 

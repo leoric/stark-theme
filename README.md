@@ -72,10 +72,10 @@ A deep plum/burgundy theme (`#6B2D5B`) with warm cream/gold foreground and accen
    ```
 3. Install the generated `.vsix` file in VS Code via Extensions > Install from VSIX
 
-## Install
+### Sublime text 4
 
 1. Open `Preferences → Browse Packages…`
-2. Copy this folder in, keeping the name `Stark Theme`.
+2. Copy this folder into the `Packages` folder and rename it to `Stark Theme`.
 3. Open `Preferences → Theme…` → pick a Stark theme.
 4. Open `Preferences → Color Scheme…` → pick the matching Stark scheme.
 
@@ -97,7 +97,7 @@ stark-theme/
 │   │   └── themes/
 │   │       ├── stark-light.json
 │   │       └── stark-dark.json
-│   └── sublime/          # Sublime Text 4 theme
+│   └── sublime/         # Sublime Text 4 theme
 ├── LICENSE
 └── README.md
 ```
