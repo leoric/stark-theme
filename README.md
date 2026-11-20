@@ -79,7 +79,6 @@ A deep plum/burgundy theme (`#6B2D5B`) with warm cream/gold foreground and accen
 3. Open `Preferences → Theme…` → pick a Stark theme.
 4. Open `Preferences → Color Scheme…` → pick the matching Stark scheme.
 
-
 ## Project Structure
 
 ```

@@ -2,15 +2,15 @@
 
 A warm, paper-like theme with purple accents, ported from
 [minhtrungcc/stark-theme](https://github.com/minhtrungcc/stark-theme).
-Variants: **Stark Light**, **Stark Dark**, **Stark Burgundy**.
+Variants: **Stark Light**, **Stark Dark**, **Stark Burgundy**, **Stark Burgundy Light**.
 
 ## Structure
 
 | File | Purpose |
 | --- | --- |
 | `Stark.hidden-theme` | All UI rules. `extends` `Adaptive.sublime-theme`. Colours are `var(...)` only. |
-| `Stark Light/Dark/Burgundy.sublime-theme` | Extend `Stark.hidden-theme` and only redefine the colour variables. |
-| `Stark Light/Dark/Burgundy.sublime-color-scheme` | Syntax colour schemes. |
+| `Stark Light/Dark/Burgundy/Burgundy Light.sublime-theme` | Extend `Stark.hidden-theme` and only redefine the colour variables. |
+| `Stark Light/Dark/Burgundy/Burgundy Light.sublime-color-scheme` | Syntax colour schemes. |
 | `Widget - Stark ….sublime-settings` | Make find/input widgets use the matching colour scheme. |
 
 To tweak a colour, edit the variable in the variant's `.sublime-theme`
